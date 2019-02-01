@@ -1,0 +1,145 @@
+// PONTTE //
+.pontte{
+    font-size: 15px;
+}
+.pontte-wrapper{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+// HEADER //
+.pontte-header{
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        background: url('/assets/img/design.png')no-repeat;
+        background-size: contain;
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        right: -130px;
+        top: -90px;
+    }
+    span{
+        color: $rosaEscuro;
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.pontte-header-logo{
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: cover;
+}
+
+// PONTTE BOX //
+.pontte-box{
+    padding-top: 30px;
+}
+.pontte-text{
+    p{
+        color: $cinza;
+        font-size: 1em;
+    }
+    p:nth-child(2){
+        margin: 10px 0;
+    }
+}
+.pontte-newsletter{
+    margin-top: 30px;
+}
+.pontte-newsletter__title{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.pontter-form{
+    width: 220px;
+    margin-top: 10px;
+}
+.pontter-field{
+    border: 2px solid $rosaEscuro;
+    padding: 10px;
+    border-radius: 10px;
+}
+.pontter-field__input{
+    width: 100%;
+    outline: none;
+    color: $rosaEscuro;
+}
+.pontter-field__input::placeholder{
+    color: $rosaEscuro;
+}
+.pontte-btn{
+    background: linear-gradient(45deg, $rosaEscuro,$azulMarinho);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    font-size: 1em;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+/// TABLET //
+
+@include tablet{
+    .pontte-header{
+        &::before{ // lOGO
+            width: 900px;
+            height: 400px;
+            right: -450px;
+            top: -140px;
+        }
+        span{
+            font-size: 2.5em;
+            max-width: 400px;
+            margin-top: 50px;
+        }
+}
+    // PONTTE BOX //
+    .pontte-box{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pontte-text{
+        width: 50%;
+        p{
+            color: $cinza;
+            font-size: 1em;
+        }
+    }
+    .pontte-newsletter{
+        margin-top: 0;
+        width: 40%;
+    }
+
+}
+@include desktop{
+    .pontte{
+        font-size: 18px;
+    }
+    .pontte-wrapper{
+        padding-top: 5%;
+    }
+    .pontte-header{
+        &::before{ // lOGO
+            width: 900px;
+            height: 600px;
+            right: -430px;
+            top: -150px;
+        }
+    }
+    .pontte-box{
+        margin-top: 60px;
+    }
+}

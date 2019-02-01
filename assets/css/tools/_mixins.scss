@@ -1,0 +1,42 @@
+@mixin tipografia-btn{
+    font-size: 10px;
+    font-weight: 600;
+    width: 140px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    color: $roxo;
+    border: 2px solid $roxo;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover{
+        background-color: $roxo;
+        color: white;
+    }
+}
+@mixin tipografia-h2{
+    
+}
+@mixin padding-top{
+    padding-top: 50px;
+}
+@mixin margin-top{
+    margin-top: 30px;
+}
+@mixin mobile-medium{
+    @media (min-width:500px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin desktop{
+    @media (min-width:1024px){
+        @content;
+    }
+}
